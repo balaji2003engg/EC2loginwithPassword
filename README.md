@@ -1,12 +1,15 @@
 # EC2loginwithPassword
 
-cd /etc/ssh/sshd_config
+1.cd /etc/ssh/sshd_config
 
 
-removed the #
+2.remove # from below line
 PasswordAuthentication yes
 
-restart the sshd
+3. Provide password to the ec2-user
+   passwd ec2-user
+
+4.  restart the sshd
 
 systemctl stop sshd
 systemctl start sshd
